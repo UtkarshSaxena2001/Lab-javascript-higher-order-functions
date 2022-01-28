@@ -1,0 +1,56 @@
+//slice
+const foods = [pizza, burger, fingerChips, donuts, springRoll];
+const modifiedFood = food.slice(1,2,3);
+console.log(modifiedFood);
+//Array splice
+const modifiedFood = food.splice(2,3,"noodles","icecream");
+//filter
+const numberArray = [12,324,213,4,2,3,45,4234];
+const isPrime = n => {
+    if (n===1){
+    return false;
+    }else if(n === 2){
+       return true;
+    }else{
+       for(let x = 2; x < n; x++){
+          if(n % x === 0){
+             return false;
+          }
+       }
+       return true;
+    };
+ };
+ const arePrime = arr => {
+    const filtered = arr.filter(el => isPrime(el));
+    return filtered;
+ };
+ console.log(arePrime(numberArray));
+ //reject
+ const nonPrime = arr => {
+    const filtered = arr.filter(el => !isPrime(el));
+    return filtered;
+ };
+ console.log(nonPrime(numberArray));
+ //lambda
+ var isPrime = n => {
+    if (n % 2 === 0) {
+        return true;
+    }
+    else {
+        return false;
+    };
+ };
+ console.log(isPrime(4));
+ console.log(isPrime(4));
+ //map
+ const myArray = [11, 34, 20, 5, 53, 16];
+function findSquaresOfNumbers(arr) {
+    const map1 = arr.map(x => x * 2);
+};
+console.log(findSquaresOfNumbers(myArray));
+ //reduce
+ myArray = [2,3,5,10];
+ const reduce = (a,b) => a * b;
+ let multiply = myArray.map(function(num){
+     return reduce(num,);
+ })
